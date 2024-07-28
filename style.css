@@ -1,0 +1,128 @@
+@font-face{
+    font-family: outfit;
+    src: url(assets/fonts/outfit/Outfit-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: young-serif;
+    src: url(assets/fonts/young-serif/YoungSerif-Regular.ttf);
+}
+:root{
+    /* -------color-------- */
+    
+    /* Primary */
+    --Nutmeg: hsl(14, 45%, 36%);
+    --Dark-Raspberry: hsl(332, 51%, 32%);
+
+    /* Neutral */
+    --White: hsl(0, 0%, 100%);
+    --Rose-White: hsl(330, 100%, 98%);
+    --Eggshell: hsl(30, 54%, 90%);
+    --Light-Grey: hsl(30, 18%, 87%);
+    --Wenge-Brown: hsl(30, 10%, 34%);
+    --Dark-Charcoal: hsl(24, 5%, 18%);
+    
+    /* --------fonts-------- */
+    --primary: outfit;
+    
+    /* spacing */
+    --space: 10%;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--primary);
+}
+body{
+    background-color: var(--Eggshell);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+main{
+    max-width: 370px;
+    background-color: var(--Rose-White);
+}
+main header img{
+    width: 100%;
+}
+main header h1{
+    margin: var(--space);
+    font-family: young-serif;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 100%;
+}
+main header p{
+    margin: var(--space);
+}
+
+/* ----------preparation---------- */
+
+main section#prep{
+    margin: var(--space);
+    background-color: var(--Eggshell);
+    border-radius: 10px;
+    padding: 1px;
+    border-bottom-style: none;
+}
+main section#prep h2{
+    margin: 20px;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--Dark-Raspberry);
+}
+main section#prep ul{
+    margin: 20px;
+}
+main section ul li{
+    margin: 20px;
+}
+
+/* ----------ingredients---------- */
+main section{
+    margin: var(--space);
+    border-bottom: 1px solid var(--Dark-Charcoal);
+    padding-bottom: 15px;
+}
+main section h2{
+    font-family: young-serif;
+    font-weight: 400;
+    font-size: 30px;
+}
+
+/* ----------instructions---------- */
+
+main section ol li{
+    margin: 20px;
+}
+
+main section p{
+    margin: 20px 0;
+}
+main section table{
+    display: block;
+}
+main section table tr{
+    width: 100%;
+}
+
+@media (min-width: 1440px){
+    body{
+        padding: 200px
+    }
+    main{
+        max-width: 768px;
+        border-radius: 20px; 
+    }
+    img{
+        border-radius: 10px;
+        margin: 20px;
+        
+    }
+}
+body{
+    display: grid;
+    grid-template-columns: ;
+    
+}
