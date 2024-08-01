@@ -12,7 +12,7 @@
     /* Primary */
     --Nutmeg: hsl(14, 45%, 36%);
     --Dark-Raspberry: hsl(332, 51%, 32%);
-
+    
     /* Neutral */
     --White: hsl(0, 0%, 100%);
     --Rose-White: hsl(330, 100%, 98%);
@@ -26,12 +26,14 @@
     
     /* spacing */
     --space: 10%;
+    --lg-space: 30px;
 }
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: var(--primary);
+    color: var(--Wenge-Brown);
 }
 body{
     background-color: var(--Eggshell);
@@ -41,7 +43,7 @@ body{
 }
 main{
     max-width: 370px;
-    background-color: var(--Rose-White);
+    background-color: var(--White);
 }
 main header img{
     width: 100%;
@@ -53,6 +55,9 @@ main header h1{
     font-size: 35px;
     line-height: 100%;
 }
+main section h2{
+    color: var(--Nutmeg);
+}
 main header p{
     margin: var(--space);
 }
@@ -61,7 +66,7 @@ main header p{
 
 main section#prep{
     margin: var(--space);
-    background-color: var(--Eggshell);
+    background-color: var(--Rose-White);
     border-radius: 10px;
     padding: 1px;
     border-bottom-style: none;
@@ -72,13 +77,30 @@ main section#prep h2{
     font-weight: 700;
     color: var(--Dark-Raspberry);
 }
+main section ul{
+    list-style: none;
+
+}
 main section#prep ul{
     margin: 20px;
 }
 main section ul li{
-    margin: 20px;
+    margin: 15px;
+    padding-left: 20px;
+    position: relative;
 }
-
+main section ul li::before{
+    content: ".";
+    font-size: 30px;
+    font-weight: 900;
+    position: absolute;
+    left: -10px;
+    top: -17px;
+    color: var(--Nutmeg);
+}
+main section#prep > ul li::before{
+    color: var(--Dark-Raspberry); 
+}
 /* ----------ingredients---------- */
 main section{
     margin: var(--space);
@@ -92,37 +114,67 @@ main section h2{
 }
 
 /* ----------instructions---------- */
+main section ol{
+    list-style: none;
+    counter-reset: coun;
+}
 
 main section ol li{
     margin: 20px;
+    padding: 20px;
+    counter-increment: coun;
+    position: relative;
 }
-
+main section ol li::before{
+    content: counter(coun) ".";
+    color: var(--Nutmeg);
+    font-weight: bold;
+    position: absolute;
+    left: -10px;
+}
 main section p{
     margin: 20px 0;
 }
 main section table{
-    display: block;
-}
-main section table tr{
     width: 100%;
+    border-collapse: collapse;
+}
+main section table td{
+    border-bottom: 1px solid var(--Dark-Charcoal);
+    padding: 20px;
+}
+main section:last-child{
+    border: none;
+}
+main section table tr:last-child td{
+    border-bottom: none;
+}
+main section table td:last-child{
+    color: var(--Nutmeg);
+    font-weight: 800;
 }
 
-@media (min-width: 1440px){
-    body{
-        padding: 200px
-    }
-    main{
-        max-width: 768px;
-        border-radius: 20px; 
-    }
-    img{
-        border-radius: 10px;
-        margin: 20px;
-        
-    }
-}
-body{
-    display: grid;
-    grid-template-columns: ;
+@media screen and ( min-width: 375px) {
     
+    main{
+        margin: 100px auto;
+        max-width: 800px;
+        border-radius: 20px;
+    }
+    
+    main header img{
+        width: 92%;
+        border-radius: 10px;
+        display: block;
+        margin: 30px auto;
+    }
+    main header h1{
+        margin: var(--lg-space);
+    }
+    main header p{
+        margin: var(--lg-space);
+    }
+    main section{
+        margin: var(--lg-space);
+    }
 }
