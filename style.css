@@ -154,7 +154,7 @@ main section table td:last-child{
     font-weight: 800;
 }
 
-@media screen and ( min-width: 375px) {
+@media screen and ( min-width: 769px) {
     
     main{
         margin: 100px auto;
