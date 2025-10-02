@@ -1,180 +1,182 @@
-@font-face{
-    font-family: outfit;
-    src: url(assets/fonts/outfit/Outfit-VariableFont_wght.ttf);
+:root{
+
+    /* Colors */
+
+    --White: hsl(0, 0%, 100%);
+
+    --Stone-100: hsl(30, 54%, 90%);
+    --Stone-150: hsl(30, 18%, 87%);
+    --Stone-600: hsl(30, 10%, 34%);
+    --Stone-900: hsl(24, 5%, 18%);
+
+    --Brown-800: hsl(14, 45%, 36%);
+
+    --Rose-800: hsl(332, 51%, 32%);
+    --Rose-50: hsl(330, 100%, 98%);
+
+    /* ### Fonts */
+
+    --headings-font-family: young-serif;
+    --young-serif-reguler: 400;
+
+    --paragraphy-font-family: outfit;
+    --outfit-reguler: 400;
+    --outfit-medium: 600;
+    --outfit-bold: 700;
+
 }
+
 @font-face {
     font-family: young-serif;
-    src: url(assets/fonts/young-serif/YoungSerif-Regular.ttf);
+    src: url(./assets/fonts/young-serif/YoungSerif-Regular.ttf);
 }
-:root{
-    /* -------color-------- */
-    
-    /* Primary */
-    --Nutmeg: hsl(14, 45%, 36%);
-    --Dark-Raspberry: hsl(332, 51%, 32%);
-    
-    /* Neutral */
-    --White: hsl(0, 0%, 100%);
-    --Rose-White: hsl(330, 100%, 98%);
-    --Eggshell: hsl(30, 54%, 90%);
-    --Light-Grey: hsl(30, 18%, 87%);
-    --Wenge-Brown: hsl(30, 10%, 34%);
-    --Dark-Charcoal: hsl(24, 5%, 18%);
-    
-    /* --------fonts-------- */
-    --primary: outfit;
-    
-    /* spacing */
-    --space: 10%;
-    --lg-space: 30px;
+
+@font-face {
+    font-family: outfit;
+    src: url(./assets/fonts/outfit/Outfit-VariableFont_wght.ttf);
 }
+
 *{
-    margin: 0;
-    padding: 0;
+    padding: 0%;
+    margin: 0%;
     box-sizing: border-box;
-    font-family: var(--primary);
-    color: var(--Wenge-Brown);
 }
+
 body{
-    background-color: var(--Eggshell);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-main{
-    max-width: 370px;
     background-color: var(--White);
-}
-main header img{
-    width: 100%;
-}
-main header h1{
-    margin: var(--space);
-    font-family: young-serif;
-    font-weight: 400;
-    font-size: 35px;
-    line-height: 100%;
-}
-main section h2{
-    color: var(--Nutmeg);
-}
-main header p{
-    margin: var(--space);
-}
+    color: var(--Stone-600);
+    font-family: var(--paragraphy-font-family);
+    font-weight: var(--outfit-reguler);
 
-/* ----------preparation---------- */
-
-main section#prep{
-    margin: var(--space);
-    background-color: var(--Rose-White);
-    border-radius: 10px;
-    padding: 1px;
-    border-bottom-style: none;
-}
-main section#prep h2{
-    margin: 20px;
-    font-size: 20px;
-    font-weight: 700;
-    color: var(--Dark-Raspberry);
-}
-main section ul{
-    list-style: none;
-
-}
-main section#prep ul{
-    margin: 20px;
-}
-main section ul li{
-    margin: 15px;
-    padding-left: 20px;
-    position: relative;
-}
-main section ul li::before{
-    content: ".";
-    font-size: 30px;
-    font-weight: 900;
-    position: absolute;
-    left: -10px;
-    top: -17px;
-    color: var(--Nutmeg);
-}
-main section#prep > ul li::before{
-    color: var(--Dark-Raspberry); 
-}
-/* ----------ingredients---------- */
-main section{
-    margin: var(--space);
-    border-bottom: 1px solid var(--Dark-Charcoal);
-    padding-bottom: 15px;
-}
-main section h2{
-    font-family: young-serif;
-    font-weight: 400;
-    font-size: 30px;
-}
-
-/* ----------instructions---------- */
-main section ol{
-    list-style: none;
-    counter-reset: coun;
-}
-
-main section ol li{
-    margin: 20px;
-    padding: 20px;
-    counter-increment: coun;
-    position: relative;
-}
-main section ol li::before{
-    content: counter(coun) ".";
-    color: var(--Nutmeg);
-    font-weight: bold;
-    position: absolute;
-    left: -10px;
-}
-main section p{
-    margin: 20px 0;
-}
-main section table{
-    width: 100%;
-    border-collapse: collapse;
-}
-main section table td{
-    border-bottom: 1px solid var(--Dark-Charcoal);
-    padding: 20px;
-}
-main section:last-child{
-    border: none;
-}
-main section table tr:last-child td{
-    border-bottom: none;
-}
-main section table td:last-child{
-    color: var(--Nutmeg);
-    font-weight: 800;
-}
-
-@media screen and ( min-width: 769px) {
-    
     main{
-        margin: 100px auto;
-        max-width: 800px;
-        border-radius: 20px;
+        max-width: 768px;
+        min-width: 320px;
+        background-color: var(--White);
+        img{
+            width: 100%;
+        }
+
+        article{
+            padding: 2rem;
+            
+            p{
+                line-height: 1.5em;   
+            }
+
+            strong{
+                color: var(--Stone-900);
+            }
+
+            header{
+
+                h1{
+                    font-family: var(--headings-font-family);
+                    font-weight: var(--young-serif-reguler);
+                    font-size: 1.75rem;
+                    font-size: 2.25rem;
+                    line-height: 1em;
+                    margin-block-end: 1.5rem;
+                    color: var(--Stone-900);
+                }
+                
+                section{
+                    padding: 2rem 2.5rem;
+                    margin-block-start: 1rem;
+                    border-block-end: none;
+                    margin-block-end: 0;
+                    
+                    h3{
+                        font-size: 1.25rem;
+                        font-weight: var(--outfit-medium);
+                        color: var(--Rose-800);
+                    }
+
+                    ul{
+                        padding: .25rem;
+                    }
+                }
+            }
+            
+            section{
+                padding-block-end: 2rem;
+                margin-block-start: 2rem;
+                border-block-end: 1px solid var(--Stone-100);
+                h2{
+                    color: var(--Brown-800);
+                    padding-block-end: 1rem;
+                    font-family: var(--headings-font-family);
+                    font-weight: var(--young-serif-reguler);
+                    font-size: 1.75rem;
+                }
+                
+                ul, ol{
+                    li{
+                        line-height: 1.5em;
+                        padding-block: .5rem;
+                        margin-inline-start: 1rem;
+                        padding-inline-start: 1rem;
+                        
+                    }
+                    li::marker{
+                        color: var(--Brown-800);
+                        font-weight: var(--outfit-bold);
+                    }
+                }
+
+                table{
+                    border-collapse: collapse;
+                    width: 100%;
+                    tr{
+                        td{
+                            border-block-end: 1px solid var(--Stone-100);
+                            padding: 1rem 0;
+                            text-align: center;
+                        }
+                        
+                        td:last-child{
+                            color: var(--Brown-800);
+                            font-weight: var(--outfit-bold);
+                            text-align: left;
+                        }
+                    }
+                    tr:last-child{
+                        td{
+                            border-block-end: none;
+                        }
+                        
+                    }
+                    
+                }
+            }
+            
+            & > section:first-of-type{
+                margin-block-start: .5rem;
+            }
+            
+            & > section:last-of-type{
+                padding-block-end: 0px;
+                border-block-end: none;
+            }
+
+        }
     }
-    
-    main header img{
-        width: 92%;
-        border-radius: 10px;
-        display: block;
-        margin: 30px auto;
-    }
-    main header h1{
-        margin: var(--lg-space);
-    }
-    main header p{
-        margin: var(--lg-space);
-    }
-    main section{
-        margin: var(--lg-space);
+
+    @media  all and (min-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        background-color: var(--Stone-150);
+
+        main{
+            border-radius: 24px;
+            img{
+                margin-inline: 2rem;
+                margin-block-start: 2rem;
+                border-radius: 16px;
+                width: 91%;
+            }
+        }
     }
 }

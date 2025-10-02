@@ -10,21 +10,20 @@ This is a solution to the [Recipe page challenge on Frontend Mentor](https://www
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
 ## Overview
 
 ### Screenshot
 
-![](screenshot.jpeg)
+![](./screenshot.jpg)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [recipe page main Github ](https://your-solution-url.com)
+- Live Site URL: [recipe page main site](https://your-live-site-url.com)
 
 ## My process
 
@@ -33,25 +32,20 @@ This is a solution to the [Recipe page challenge on Frontend Mentor](https://www
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
+- CSS Grid
 - Mobile-first workflow
-
-### What I learned
-
-In this project I learn how to use CSS ::before pseudo element to put list bullets of diffent color than list items.
-I also learned more about CSS flexbox and media quaries.
-
-### Continued development
-
-I will continueo to improve on accebility as I go on.
 
 ### Useful resources
 
-- [w3schools](https://www.w3schools.com) - This is good for all web develoment realated resources.
-
+- [web.dev](https://www.web.dev) - This helped me with the fundamentals in HTML and CSS that made some problems easy to solve.
+- [Figma Learn](https://help.figma.com) - This is an amazing platiform to learn ui/ux design principles.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@Taffy-R](https://www.frontendmentor.io/profile/Taffy-R)
-- Twitter - [@tafadzwaruzvidz](https://www.twitter.com/tafadzwaruzvidz)
+- Website - [portfolio](https://www.your-site.com)
+- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/Taffy-r)
+- Twitter - [@yourusername](https://www.twitter.com/taffy-ruaz)
 
+## Acknowledgments
+
+I would like to give thanks to Google Gemini for its assistance whith some problames I face in CSS. The help it offers was impacable a vital to the complition of the project. 
